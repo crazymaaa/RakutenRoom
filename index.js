@@ -102,11 +102,15 @@ async function post(itemCode, description, itemName, catchcopy) {
     await page.type(xpathPassword, password);
     await page.click("xpath=/html/body/div[2]/div/div/div[1]/div/form/div/p[1]/input");
     console.log("うううう");
+    try{
     // ログイン後のページ遷移を待つ
     await page.waitForSelector("xpath=/html/body/div[2]/div[2]/div[2]/div/div/form/div[2]/div[4]/div[3]/textarea", {
       timeout: 50000,
       visible: true,
     });
+    } catch (error){
+      console.log(error);
+    }
     console.log("ええええ");
 
     // コレ！済みの場合は、処理を終了
