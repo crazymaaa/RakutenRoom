@@ -61,7 +61,7 @@ try {
 async function post(itemCode, description, itemName, catchcopy) {
   try {
     const browser = await puppeteer.launch({
-      headless: "new", 
+      headless: false, 
       defaultViewport: {
         width: 800, height: 1600
       },
