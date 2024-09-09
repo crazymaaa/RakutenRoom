@@ -66,10 +66,7 @@ async function post(itemCode, description, itemName, catchcopy) {
         width: 800, height: 1600
       },
       args: [
-        "--disable-setuid-sandbox",
         "--no-sandbox",
-        "--single-process",
-        "--no-zygote",
       ],
       executablePath:
         process.env.NODE_ENV === "production"
