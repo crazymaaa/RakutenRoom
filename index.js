@@ -61,7 +61,7 @@ try {
 async function post(itemCode, description, itemName, catchcopy) {
   try {
     const browser = await puppeteer.launch({
-      headless: false, 
+      headless: "new", 
       defaultViewport: {
         width: 800, height: 1600
       },
@@ -98,7 +98,7 @@ async function post(itemCode, description, itemName, catchcopy) {
     const xpathId = "xpath=/html/body/div[2]/div/div/div[1]/div/form/div/table/tbody/tr[1]/td[2]/input";
     const xpathPassword = "xpath=/html/body/div[2]/div/div/div[1]/div/form/div/table/tbody/tr[2]/td[2]/input"
     await page.waitForSelector(xpathId, {visible: true});
-    await page.focus(xpathId,);
+    await page.focus(xpathId);
     await page.type(xpathId, userId);
     await page.waitForSelector(xpathPassword, {visible: true});
     await page.focus(xpathPassword);
