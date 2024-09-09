@@ -107,7 +107,7 @@ async function post(itemCode, description, itemName, catchcopy) {
     console.log("うううう");
     // ログイン後のページ遷移を待つ
     await page.waitForSelector("xpath=/html/body/div[2]/div[2]/div[2]/div/div/form/div[2]/div[4]/div[3]/textarea", {
-
+      timeout: 50000,
       visible: true,
     });
     console.log("ええええ");
